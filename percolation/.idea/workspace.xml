@@ -27,7 +27,7 @@
   </component>
   <component name="ProjectId" id="1aRpQjDgLzUhlPfl1bMaDWYCcdC" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$USER_HOME$/algs4/algs4.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -45,16 +45,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JAR Application.algs4.jar (1)">
+  <component name="RunManager" selected="Application.PercolationStats">
     <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
     </configuration>
+    <configuration name="PercolationStats" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="PercolationStats" />
+      <module name="Percolation" />
+      <option name="PROGRAM_PARAMETERS" value="20 20" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+      <method v="2" />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />

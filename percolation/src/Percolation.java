@@ -2,20 +2,19 @@ import edu.princeton.cs.algs4.WeightedQuickUnionUF;
 
 public class Percolation {
     private int[][] squares;
-    private int row;
-    private int col;
     private int gridSize;
     private int gridLength;
     private WeightedQuickUnionUF gridConnect;
     private int noOfOpen;
 
     public Percolation(int n) {
+        squares = new int[n][n];
         gridLength = n;
         if (n <= 0) {
             throw new IllegalArgumentException("n must be a positive integer"); //An exception to an invalid entry of n
         }
-        for (row = 0; row < n; row = row++) {   //Creates a 2D array that represents the grid
-            for (col = 0, col < n, col = col++) {   //If the value in the array is 0, that square is "blocked"
+        for (int row = 0; row < n; row = row++) {   //Creates a 2D array that represents the grid
+            for (int col = 0; col < n; col = col++) {   //If the value in the array is 0, that square is "blocked"
                 squares[row][col] = 0;  //At the start of the problem, every square is blocked
             }   //As squares are opened, their value in this array will change to a 1
         }
