@@ -9,16 +9,16 @@ import java.util.NoSuchElementException;
 
 public class Deque<Item> implements Iterable<Item> {
 
-    // construct an empty deque
-    public Deque() {
-    }
-
     // tracks the size of the linked list (constant time)
     private int listSize = 0;
 
     // track the ends of the deque
     private Node first = null;
     private Node last = null;
+
+    // construct an empty deque
+    public Deque() {
+    }
 
     // creates a node datatype, with data "item" and pointer to next node "next"
     private class Node {
@@ -69,7 +69,9 @@ public class Deque<Item> implements Iterable<Item> {
         Node newFirst = new Node();
         newFirst.setItem(item);
         newFirst.setNext(first);
-        first.setPrev(newFirst);
+        if (first != null) {
+            first.setPrev(newFirst);
+        }
         first = newFirst;
         if (listSize == 1) {
             last = newFirst;
@@ -86,7 +88,9 @@ public class Deque<Item> implements Iterable<Item> {
         newLast.setItem(item);
         newLast.setNext(null);
         newLast.setPrev(last);
-        last.setNext(newLast);
+        if (last != null) {
+            last.setNext(newLast);
+        }
         last = newLast;
         if (listSize == 1) {
             first = last;
@@ -165,7 +169,13 @@ public class Deque<Item> implements Iterable<Item> {
 
     // unit testing (required)
     public static void main(String[] args) {
-
+        Deque<Integer> newDeque = new Deque<Integer>();
+        for (int i = 0; i < 20; i++) {
+            newDeque.addFirst(i);
+        }
+        for (Integer n : newDeque) {
+            System.out.println(n);
+        }
     }
 
 

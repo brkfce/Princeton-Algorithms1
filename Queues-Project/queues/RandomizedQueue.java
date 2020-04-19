@@ -74,9 +74,10 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 
     // unit testing (required)
     public static void main(String[] args) {
+        // Empty
     }
 
-    //PRIVATE FUNCTIONS
+    // PRIVATE FUNCTIONS
 
     private class RandomizedQueueIterator implements Iterator<Item> {
         private Item[] tempArray;
@@ -107,7 +108,7 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
             }
         }
 
-        //Unsupported functionality
+        // Unsupported functionality
         public void remove() {
             throw new UnsupportedOperationException("Remove is not supported");
         }
